@@ -278,3 +278,105 @@ function findSumDigit(num) {
 
 // findSumDigit(123);
 // findSumDigit(456);
+
+/**
+        Given an array of integers nums, return the largest element in the array.
+
+        Example 1:
+        Input: nums = [1, 2, 3, 4, 5]
+        Output: 5
+
+        Example 2:
+        Input: nums = [10, 9, 8, 7, 6]
+        Output: 10
+    **/
+
+function FindMaxNum(num) {
+  var sum = Math.max(...num);
+
+  console.log(sum);
+}
+
+// FindMaxNum([1, 2, 3, 4, 5]);
+// FindMaxNum([10, 9, 8, 7, 6]);
+
+/**
+        Given two strings s1 and s2, return true if s1 contains s2, and false otherwise.
+
+        Example 1:
+        Input: s1 = "hello", s2 = "ell"
+        Output: true
+
+        Example 2:
+        Input: s1 = "world", s2 = "orl"
+        Output: true
+
+        Example 3:
+        Input: s1 = "javascript", s2 = "java"
+        Output: true
+
+        Example 4:
+        Input: s1 = "coding", s2 = "fun"
+        Output: false
+    **/
+
+function MatchCon(s1, s2) {
+  //   s1Split = s1.split("");
+  //   s2Split = s2.split("");
+
+  //   // console.log(s1Split, s2Split);
+
+  //   for (let i = 0; i < s1Split.length; i++) {
+  //     for (let a = 0; a < s2Split.length; a++) {
+  //       if (s1Split[i] == s2Split[a]) {
+  //         return true;
+  //       }
+  //     }
+  //   }
+
+  if (s1.includes(s2)) {
+    return true;
+  } else {
+    return false;
+  }
+}
+
+// console.log(MatchCon("hello", "ell"));
+// console.log(MatchCon("coding", "fun"));
+// console.log(MatchCon("javascript", "java"));
+// console.log(MatchCon("world", "orl"));
+
+/**
+        Given a temperature in Celsius, return the temperature in Fahrenheit.
+
+        Example 1:
+        Input: celsius = 0
+        Output: 32
+
+        Example 2:
+        Input: celsius = 100
+        Output: 212
+    **/
+
+function Celsius(celsius) {
+  let fahrenheit = (celsius * 9) / 5 + 32;
+
+  console.log(fahrenheit);
+}
+
+// Celsius(0);
+// Celsius(100);
+
+
+/**
+        Given an integer n, return "even" if n is even, and "odd" if n is odd.
+
+        Example 1:
+        Input: n = 4
+        Output: "even"
+
+        Example 2:
+        Input: n = 7
+        Output: "odd"
+**/
+
