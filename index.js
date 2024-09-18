@@ -367,7 +367,6 @@ function Celsius(celsius) {
 // Celsius(0);
 // Celsius(100);
 
-
 /**
         Given an integer n, return "even" if n is even, and "odd" if n is odd.
 
@@ -379,4 +378,133 @@ function Celsius(celsius) {
         Input: n = 7
         Output: "odd"
 **/
+
+function OddOrEven(num) {
+  if (num % 2 == 0) {
+    console.log("even");
+  } else {
+    console.log("odd");
+  }
+}
+
+// OddOrEven(4);
+// OddOrEven(7);
+
+/**
+        Given a string s, return the length of the string.
+
+        Example 1:
+        Input: s = "hello"
+        Output: 5
+
+        Example 2:
+        Input: s = "world"
+        Output: 5
+    **/
+
+function strLength(str) {
+  console.log(str.length);
+}
+
+// strLength("hello");
+// strLength("world");
+
+/**
+        Given an array of integers nums, return true if the array is sorted in ascending order, and false otherwise.
+
+        Example 1:
+        Input: nums = [1, 2, 3, 4, 5]
+        Output: true
+
+        Example 2:
+        Input: nums = [5, 4, 3, 2, 1]
+        Output: false
+**/
+
+function Asc(num) {
+  let sort_num = [...num].sort();
+
+  //   console.log(num);
+  //   console.log(sort_num);
+
+  for (let i = 0; i < num.length; i++) {
+    if (num[i] != sort_num[i]) {
+      return false;
+    } else {
+      return true;
+    }
+  }
+}
+
+// console.log(Asc([1, 2, 3, 4, 5]));
+// console.log(Asc([5, 4, 3, 2, 1]));
+
+/**
+        Given an array of integers nums, return the second largest element in the array.
+
+        Example 1:
+        Input: nums = [1, 2, 3, 4, 5]
+        Output: 4
+
+        Example 2:
+        Input: nums = [10, 9, 8, 7, 6]
+        Output: 9
+    **/
+
+function SecondLarge(nums) {
+  // let a = [...nums].sort();
+
+  // var newArray = new Float64Array(nums);
+
+  // newArray = newArray.sort();
+
+  nums = nums.sort((a, b) => a - b);
+
+  let b = nums.length;
+
+  // let first_largest = nums[0];
+  // let second_largest = nums[0];
+
+  // for (let i = 0; i < nums.length; i++) {
+  //   if (first_largest < nums[i]) {
+  //     second_largest = first_largest;
+  //     first_largest = nums[i];
+  //   } else if (second_largest < nums[i]) {
+  //     second_largest = nums[i];
+  //   }
+  // }
+
+  // for (let i = 0; i < nums.length; i++) {}
+
+  console.log(nums[b - 2]);
+  // console.log(b);
+  // console.log(second_largest);
+}
+
+SecondLarge([1, 2, 3, 4, 5]);
+SecondLarge([10, 9, 8, 7, 6]);
+
+/**
+        Given an array of integers nums and an integer target, return the index of target in nums. If target is not present, return -1.
+
+        Example 1:
+        Input: nums = [1, 2, 3, 4, 5], target = 3
+        Output: 2
+
+        Example 2:
+        Input: nums = [10, 9, 8, 7, 6], target = 5
+        Output: -1
+    **/
+
+function FindTarget(nums, target) {
+  var a = 0;
+  for (i = 0; i < nums.length; i++) {
+    if (nums[i] == target) {
+      a = i;
+    }
+    console.log(a);
+  }
+}
+
+FindTarget([1, 2, 3, 4, 5], 3);
 
